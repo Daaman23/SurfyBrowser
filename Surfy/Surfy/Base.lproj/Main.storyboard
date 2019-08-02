@@ -18,22 +18,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0gV-2A-BNe">
-                                <rect key="frame" x="0.0" y="72" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <searchBar contentMode="redraw" barStyle="black" text="" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gV-2A-BNe">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZXs-hG-Zgc">
-                                <rect key="frame" x="0.0" y="116" width="414" height="697"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZXs-hG-Zgc">
+                                <rect key="frame" x="0.0" y="100" width="414" height="713"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0z0-rM-6AC">
+                                <rect key="frame" x="0.0" y="100" width="414" height="2"/>
+                            </progressView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0z0-rM-6AC" firstAttribute="top" secondItem="0gV-2A-BNe" secondAttribute="bottom" id="9iW-ZY-reK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0gV-2A-BNe" secondAttribute="trailing" id="GSr-cb-iId"/>
+                            <constraint firstItem="ZXs-hG-Zgc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Gnv-z4-BbI"/>
+                            <constraint firstItem="ZXs-hG-Zgc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Hlc-EV-DKi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0z0-rM-6AC" secondAttribute="bottom" constant="711" id="SVG-AC-e1e"/>
+                            <constraint firstItem="ZXs-hG-Zgc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="T03-gq-wBd"/>
+                            <constraint firstItem="0z0-rM-6AC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Zou-7E-cEb"/>
+                            <constraint firstItem="ZXs-hG-Zgc" firstAttribute="top" secondItem="0gV-2A-BNe" secondAttribute="bottom" id="f6r-Wg-mWN"/>
+                            <constraint firstItem="0gV-2A-BNe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="g1Z-Qa-buz"/>
+                            <constraint firstAttribute="trailing" secondItem="0z0-rM-6AC" secondAttribute="trailing" id="hwp-nt-3df"/>
+                            <constraint firstItem="0gV-2A-BNe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rRa-f9-97Y"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <toolbarItems>
@@ -64,6 +79,8 @@
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="uab-rm-SKw">
                         <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.14413321373376209" green="0.14413321373376209" blue="0.14413321373376209" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Kg7-ZA-1se"/>
